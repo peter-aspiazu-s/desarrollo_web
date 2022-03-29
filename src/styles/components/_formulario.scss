@@ -38,27 +38,34 @@
 }
 
 .formulario__input {
-    height: 8vh;
+    height: 50px;
     padding: 0 10px;
+    font-size: 18px;
+    font-weight: 600;
     
     &::placeholder {
         opacity: 1;
+        color: #000;
     }
 }
 
 .formulario__textarea {
-    height: 15vh;
+    height: 130px;
     padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 600;
 
     &::placeholder {
         opacity: 1;
+        color: #000;
     }
 }
 
 .formulario__submit {
-    height: 8vh;
+    height: 40px;
     padding: 0 10px;
     cursor: pointer;
+    font-size: 20px;
 }
 
 .formulario__input, .formulario__textarea, .formulario__submit {
