@@ -40,11 +40,19 @@
 .formulario__input {
     height: 8vh;
     padding: 0 10px;
+    
+    &::placeholder {
+        opacity: 1;
+    }
 }
 
 .formulario__textarea {
     height: 15vh;
     padding: 5px 10px;
+
+    &::placeholder {
+        opacity: 1;
+    }
 }
 
 .formulario__submit {
