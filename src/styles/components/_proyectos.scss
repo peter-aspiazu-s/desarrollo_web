@@ -1,0 +1,18 @@
+.proyectos__swiper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    a {
+        position: absolute;
+        align-self: center;
+        justify-self: center;
+        background-color: rgba($color: #009154, $alpha: .7);
+        box-shadow: inset 0px 0px 25px 0px #03602c;
+        color: $text-color;
+        padding: 10px 20px;
+        border: 1px solid #333;
+        font-weight: 500;
+        border-radius: 5px;
+    }
+}

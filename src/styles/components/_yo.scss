@@ -1,0 +1,83 @@
+.yo__h3 {
+    font-size: 22px;
+}
+
+.yo__img {
+    width: 280px;
+    border: 1px solid #03602c;
+    box-shadow: 0px 0px 5px 0px #03602c;
+}
+
+.yo__div-div {
+
+    margin-top: 20px;
+
+    h2 {
+        font-size: 20px;
+
+        &::before {
+            content: "Mi nombre es ";
+            font-size: 16px;
+            font-weight: 500;
+        }
+        &::after {
+            content: " y tengo 1 año de experiencia en este ámbito 
+            que tanto me gusta. Estoy en constante aprendizaje para mejorar 
+            mis habilidades como desarrollador y asi entregar proyectos de mayor calidad.";
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
+
+.yo__aside {
+    .yo__aside-div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+        align-items: center;
+
+        .yo__aside-div-div {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .yo__aside-div-div {
+        i {
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .yo__div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .yo__img {
+            margin-right: 10px;
+        }
+
+        .yo__div-div h2 {
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .yo__div{
+        .yo__div-div h2 {
+            text-align: center;
+        }
+    }
+}

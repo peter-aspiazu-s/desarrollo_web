@@ -1,0 +1,56 @@
+.social__enlace {
+    background-color: #009154;
+    color: $text-color;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    z-index: 102;
+
+    
+}
+
+.social__enlace-hover{
+    opacity: 0.5;
+    transition: opacity .5s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+
+
+.redes__container {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 102;
+}
+
+.redes__enlace {
+
+    margin-bottom: 20px;
+
+    i {
+        font-size: 30px;
+        color: #003618;
+    }
+
+    
+}
+
+
+@media screen and (min-width: 800px) {
+    .redes__enlace {
+        i {
+            font-size: 35px;
+        }
+    }
+}

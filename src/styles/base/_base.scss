@@ -1,0 +1,65 @@
+/*-------- variables ---------*/
+$text-color: white;
+$text-dark: #333;
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    background-color: white;
+    color: white;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.mt-1 {
+    margin-top: 5px;
+}
+
+.mt-2 {
+    margin-top: 10px;
+}
+
+.mt-5 {
+    margin-top: 25px;
+}
+
+.mt-8 {
+    margin-top: 40px;
+}
+
+.mt-10 {
+    margin-top: 50px;
+}
+
+.mb-1 {
+    margin-bottom: 5px;
+}
+
+.mb-2 {
+    margin-bottom: 10px;
+}
+
+.mb-4 {
+    margin-bottom: 20px;
+}
+
+.mb-5 {
+    margin-bottom: 25px;
+}
+
+.ms-1 {
+    margin-left: 5px;
+}
+
+.me-1 {
+    margin-right: 5px;
+}

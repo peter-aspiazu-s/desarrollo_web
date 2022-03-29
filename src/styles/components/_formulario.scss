@@ -1,0 +1,162 @@
+.formulario {
+    background-color: rgba(0, 164, 64, 0.9);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 103;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario__hidden {
+    display: none;
+}
+
+.fa-circle-xmark {
+    color: #005330;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.formulario__h2 {
+    color: #dbdbdb;
+}
+
+.formulario__form {
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.formulario__input {
+    height: 8vh;
+    padding: 0 10px;
+}
+
+.formulario__textarea {
+    height: 15vh;
+    padding: 5px 10px;
+}
+
+.formulario__submit {
+    height: 8vh;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.formulario__input, .formulario__textarea, .formulario__submit {
+    background-color: #009154;
+    box-shadow: inset 0px 0px 25px 0px #03602c;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: $text-color;
+
+    &:focus {
+        box-shadow: 0px 0px 15px 0px #03602c;
+        outline: 0;
+    }
+}
+
+
+
+
+@media screen and (min-width: 500px) {
+    .formulario {
+        width: 90vw;
+        height: 90vh;
+        top: 30px;
+        margin: 0 1.6rem;
+        border: 1px solid aliceblue;
+    }
+
+    .formulario__form {
+        width: 80vw;
+        height: 80vh;
+    }
+
+    .formulario__input, .formulario__textarea, .formulario__submit {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .formulario {
+        width: 80vw;
+        margin: 0 4rem;
+    }
+
+    .formulario__form {
+        width: 70vw;
+    }
+}
+
+
+@media screen and (min-width: 700px) {
+    .formulario {
+        width: 70vw;
+        height: 80vh;
+        top: 70px;
+        margin: 0 6.4rem;
+    }
+
+    .formulario__form {
+        width: 60vw;
+        height: 70vh;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .formulario {
+        top: 70px;
+        margin: 0 8rem;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    .formulario {
+        width: 60vw;
+        top: 70px;
+        margin: 0 12rem;
+    }
+
+    .formulario__form {
+        width: 50vw;
+        height: 65vh;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .formulario {
+        width: 55vw;
+        margin: 0 14rem;
+    }
+
+    .formulario__form {
+        width: 45vw;
+    }
+}
+
+
+@media screen and (min-width: 1100px) {
+    .formulario {
+        margin: 0 16rem;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .formulario {
+        margin: 0 17rem;
+    }
+}
