@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import Swal from "sweetalert2";
 import { ingresarTestimonio } from "../helpers/aggTestimonio";
 import { guardarImagenUsuario } from "../helpers/guardarImagenUsuario";
@@ -8,12 +8,17 @@ import { Usercontext } from "./UserContext";
 
 export const TestimonioCliente = () => {
 
-    const {
-        userGoogle, 
-        actualizarTestimonios, 
-        userPhoto, 
-        setUserPhoto,
-    } = useContext(Usercontext);
+    const { userGoogle, actualizarTestimonios, setUserPhoto } = useContext(Usercontext);
+    
+    const [ formValues, setFormValues, handleInputChange ] = useForm({
+        nombre: '',
+        mensaje: '',
+        url: '',
+        uid: userGoogle.uid,
+        date: new Date(),
+    });
+
+    const { nombre, mensaje, url } = formValues;
 
     const subirImagen = () => {
         document.querySelector('#fileSelector').click();
@@ -24,31 +29,17 @@ export const TestimonioCliente = () => {
         const res = await guardarImagenUsuario(userGoogle.uid, file);
         const urlImagen = await obtenerImagenUsuario(res.metadata.fullPath);
         setUserPhoto(urlImagen);
-    }
-
-    const [ formValues, handleInputChange ] = useForm({
-        nombre: '',
-        mensaje: '',
-        url: '',
-        date: new Date(),
-        uid: userGoogle?.uid
-    });
-
-    const [ copiaFormValues, setCopiaFormValues ] = useState({});
-
-    useEffect(() => {
-        setCopiaFormValues({
+        setFormValues({
             ...formValues,
-            url: userPhoto
+            uid: userGoogle.uid,
+            url: urlImagen
         })
-    }, [formValues])
-
-    const { nombre, mensaje, url } = formValues;
+    }
 
     const handleClickAdd = async() => {
 
         if(isFormValid()){
-            ingresarTestimonio( {...copiaFormValues} );
+            ingresarTestimonio( formValues );
             actualizarTestimonios();
         }
     }
@@ -66,6 +57,14 @@ export const TestimonioCliente = () => {
             Swal.fire({
                 title: 'Error!',
                 text: 'El mensaje es requerido y debe tener 10 o más caracteres',
+                icon: 'warning',
+                confirmButtonText: 'ok'
+            })
+            return false;
+        } else if(url.length < 1){
+            Swal.fire({
+                title: 'Error!',
+                text: 'La imagen es requerida',
                 icon: 'warning',
                 confirmButtonText: 'ok'
             })

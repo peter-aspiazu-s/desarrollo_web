@@ -12,7 +12,6 @@ import { Usercontext } from "./components/UserContext";
 import { Yo } from "./components/Yo";
 import { app } from "./firebase/firebase-config";
 import { getAuth } from "firebase/auth";
-import { leerData } from "./helpers/validarUsuario";
 import { Login } from "./components/Login";
 import { TestimonioCliente } from "./components/TestimonioCliente";
 import { leerTestimonios } from "./helpers/leerTestimonios";
@@ -39,8 +38,8 @@ export const Home = () => {
     const [ testimonio, setTestimonios ] = useState([]);
     const [ userPhoto, setUserPhoto ] = useState();
 
-    let i;
-    let testimoniosUser = [];
+    //let i;
+    //let testimoniosUser = [];
 
     const actualizarTestimonios = () => {
         leerTestimonios().then((testimonios) => {
@@ -52,8 +51,8 @@ export const Home = () => {
         onAuthStateChanged(auth, async(user) => {
 
             if(user){
-                for(i = 0; i < testimonio.length; i++){
-                    testimoniosUser.push(testimonio[i].uid);
+                //for(i = 0; i < testimonio.length; i++){
+                    //testimoniosUser.push(testimonio[i].uid);
                     //if(testimoniosUser.indexOf(user.uid, i)){
                     if(false){
                         setCurrentUser(2);
@@ -62,7 +61,7 @@ export const Home = () => {
                         setCurrentUser(3);
                         console.log('false')
                     }
-                }
+                //}
                 setUserLogin(true);
                 setUserGoogle(user);
             } else {
@@ -73,7 +72,7 @@ export const Home = () => {
 
         actualizarTestimonios();
         
-    }, [userGoogle]);
+    }, []);
 
     
 

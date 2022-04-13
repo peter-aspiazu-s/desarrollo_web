@@ -22,7 +22,7 @@ export const useForm = ( initialState = {} ) => {
     }
     // 18.- Creamos una funcion para restear el formulario
 
-    return [ values, handleInputChange, reset ];
+    return [ values, setValues, handleInputChange, reset ];
     // 19.- Retornamos el arreglo, la funcion handleInputChange y la funcion reset para usarlos en el componente TodoAdd.
 
 }
