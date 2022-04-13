@@ -6,6 +6,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 export const Proyectos = () => {
+
+
     return (
         <article className="mt-10 container" id="portafolio">
             <h2 className="text-center mb-4">Proyectos</h2>

@@ -1,9 +1,9 @@
 import { useForm } from "../hooks/useForm";
-import { ingresarDatos } from "../firebase/firebase-config";
 import { useContext } from "react";
 import { Usercontext } from "./UserContext";
 import validator from 'validator';
 import Swal from 'sweetalert2';
+import { guardarFormulario } from "../helpers/guardarFormulario";
 
 export const Formulario = () => {
 
@@ -21,14 +21,13 @@ export const Formulario = () => {
         e.preventDefault();
 
         if(isFormValid()){
-            ingresarDatos(formValues);
+            guardarFormulario(formValues);
             handleClickRemove();
         }
     }
 
     const isFormValid = () => {
         if(nombre.trim().length === 0){
-            console.log('El nombre es requerido')
             Swal.fire({
                 title: 'Error!',
                 text: 'El nombre es requerido',
@@ -68,13 +67,12 @@ export const Formulario = () => {
         return true;
     }
 
-    console.log('Se volvio a renderizar Formulario');
-
     const {form, setForm} = useContext(Usercontext);
     
     const handleClickRemove = () => {
         setForm(false);
     }
+
     
     return ( form &&
         <div className="formulario animate__animated animate__backInDown">

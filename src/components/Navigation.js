@@ -5,7 +5,7 @@ import { Usercontext } from './UserContext';
 
 export const Navigation = () => {
 
-    const { setForm, state, setState} = useContext(Usercontext);
+    const { setForm, state, setState, userLogin} = useContext(Usercontext);
 
     const handleClickAdd = () => {
         setForm(true)
@@ -17,8 +17,6 @@ export const Navigation = () => {
         scrollItemMenu(e);
         setState(false);
     }
-
-    console.log('Se volvio a renderizar navigation')
 
 
 
@@ -54,12 +52,22 @@ export const Navigation = () => {
                     ¿QUIEN SOY?
                 </a>
                 <a 
-                    className="container text-center menu__item pointer"
-                    onClick={ handleClickAdd }
-                >
-                    <i className="fa-solid fa-envelope-open-text fa-xl me-1"></i>
-                    CONTACTAME
+                    className="container text-center menu__item pointer" 
+                    href="#testimonios"
+                    onClick={ handleClickItemMenu }>
+                    <i className="fa-solid fa-file-pen fa-xl me-1"></i>
+                    TESTIMONIOS
                 </a>
+                {
+                    (userLogin) &&
+                    <a 
+                        className="container text-center menu__item pointer"
+                        onClick={ handleClickAdd }
+                    >
+                        <i className="fa-solid fa-envelope-open-text fa-xl me-1"></i>
+                        CONTACTAME
+                    </a>
+                }
             </nav>
         </div>
     )

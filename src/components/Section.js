@@ -1,4 +1,5 @@
 export const Section = () => {
+
     return (
         <section className="container mt-5 section">
             <h2 className="section__h2">Indispensable en un sitio web</h2>

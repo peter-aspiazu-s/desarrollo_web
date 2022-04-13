@@ -1,0 +1,129 @@
+.testimonio__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 350px;
+
+    .fa-file-pen, .fa-floppy-disk {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .fa-floppy-disk {
+        right: 10px !important;
+    }
+
+    .testimonio__circle-img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        
+        img {
+            width: 130px;
+        }
+        
+    }
+    .circle-border {
+        border: 1px solid #333;
+
+    }
+
+    .fa-image {
+        position: absolute;
+        top: 90px;
+        left: 80px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+    .ico-img{
+        top: 50px !important;
+        left: 50px !important;
+    }
+
+    h3 {
+        margin-top: 5px;
+    }
+
+    .testimonio__form-name, .testimonio__form-msg {
+        background-color: #009154;
+        box-shadow: inset 0px 0px 25px 0px #03602c;
+        border-radius: 5px;
+        border: 1px solid white;
+        width: 100%;
+        font-size: 16px;
+        padding: 10px 10px;
+        margin-top: 5px;
+
+        &::placeholder {
+            opacity: 0.9;
+            color: #000;
+        }
+        
+        &:focus {
+            box-shadow: 0px 0px 15px 0px #03602c;
+            outline: 0;
+            background-color: transparent;
+        }
+    }
+
+    .testimonio__form-name {
+        height: 40px;
+    }
+
+    .testimonio__form-msg {
+        height: 100px;
+    }
+
+    p{
+        text-align: center;
+        color: #333;
+        opacity: .9;
+        overflow: scroll;
+        width: 250px;
+        height: 100px;
+        margin-top: 10px;
+    }
+}
+
+.testimonio__file {
+    display: none;
+}
+
+@media screen and (min-width: 600px){
+    .testimonio__container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        
+    }
+    .testimonio__card {
+        border: 1px solid #eee;
+        padding: 5px;
+
+        .fa-file-pen  {
+            top: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 800px){
+    .testimonio__container{
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .testimonio__card {
+        padding: 10px;
+    }
+}

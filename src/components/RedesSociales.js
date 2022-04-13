@@ -1,14 +1,22 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { Usercontext } from "./UserContext"
 
 export const RedesSociales = () => {
 
-    const { social, setSocial } = useContext( Usercontext );
 
+    const { social, setSocial, setForm, userLogin } = useContext( Usercontext );
+    
     const handleSocialAdd = () => {
         setSocial(!social);
     }
-    
+
+    const handleClickForm = (e) => {
+        e.preventDefault();
+        setForm(true);
+        setSocial(!social);
+    }
+
+
     return (
         <>  
             <div 
@@ -30,9 +38,12 @@ export const RedesSociales = () => {
                     <div className="redes__enlace">
                         <a href="https://wa.me/593967454468" title="whatsapp" target="_blank"><i className="fa-brands fa-whatsapp-square"></i></a>
                     </div>
-                    <div className="redes__enlace">
-                        <a href="mailto:paspiazusabando@gmail.com" title="gmail"><i className="fa-solid fa-square-envelope"></i></a>
-                    </div>
+                    {
+                        (userLogin) && 
+                        <div className="redes__enlace">
+                            <a href="#" title="correo" onClick={ handleClickForm }><i className="fa-solid fa-square-envelope"></i></a>
+                        </div>
+                    }
                     <div className="redes__enlace">
                         <a href="https://www.instagram.com/paspiazus/" title="instagram" target="_blank"><i className="fa-brands fa-instagram-square"></i></a>
                     </div>
@@ -51,4 +62,5 @@ export const RedesSociales = () => {
             
         </>
     )
+    
 }

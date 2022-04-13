@@ -1,4 +1,6 @@
 export const Main = () => {
+
+    
     return (
         <main className="container main mt-5" id="servicios">
             <div className="main__title">

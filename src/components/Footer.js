@@ -1,4 +1,6 @@
 export const Footer = () => {
+
+
     return (
         <footer className="footer">
             <small className="footer__small">Todos los derechos reservados © | <br />

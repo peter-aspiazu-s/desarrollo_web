@@ -1,4 +1,6 @@
 export const Yo = () => {
+
+
     return (
         <article className="mt-10 container text-center" id="yo">
             <h3 className="yo__h3">¿Quien Soy?</h3>

@@ -1,22 +1,27 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Formulario } from "./Formulario";
 import { Navigation } from "./Navigation";
 import { Usercontext } from "./UserContext";
+import { GoogleAuthProvider } from "firebase/auth";
+import { loginGoogle } from "../helpers/loginGoogle";
+import { logoutGoogle } from "../helpers/logoutGoogle";
 
 export const BarraSup = () => {
 
-    const {state, setState, form, setForm} = useContext(Usercontext);
+    const {state, setState, form, currentUser, userLogin} = useContext(Usercontext);
     
     const handleClickMenu = () => {
         setState(!state);
     }
 
-    const handleClickForm = () => {
-        setForm(true)
+    const handleGoogleLogin = async() => {
+        const googleProvider = new GoogleAuthProvider();
+        await loginGoogle(googleProvider);
     }
 
-    console.log('Se volvio a renderizar BarraSup')
-    
+    const handleGoogleLogout = () => {
+        logoutGoogle();
+    }
 
     return (
         <>
@@ -30,10 +35,24 @@ export const BarraSup = () => {
                 ></i>
                 <i className="fa-solid fa-code"></i>
                 <h1>DESARROLLO WEB</h1>
-                <i 
-                    className="fa-solid fa-envelope fa-xl pointer"
-                    onClick={ handleClickForm }
-                ></i>
+                {
+                    (userLogin) &&  
+                        <i 
+                            className="fa-solid fa-user-large-slash fa-xl pointer"
+                            title="Logout" 
+                            alt="Logout"
+                            onClick={handleGoogleLogout}
+                        ></i>
+                }
+                {
+                    (!userLogin) &&
+                    <i 
+                        className="fa-solid fa-user fa-xl pointer" 
+                        title="Login" 
+                        alt="Login" 
+                        onClick={handleGoogleLogin}
+                    ></i>
+                }
             </div>
 
             {
