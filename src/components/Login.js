@@ -9,7 +9,7 @@ export const Login = () => {
     }
 
     return (
-        <div className="google__div mt-8">
+        <div className="google__div">
             <p className="text-center">Hola si he trabajado en tu sitio web y deseas poner tu testimonio
                         puedes iniciar sesión con google y agregar tu mensaje</p>
             <div 

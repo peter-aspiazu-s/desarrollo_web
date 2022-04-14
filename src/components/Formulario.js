@@ -80,7 +80,6 @@ export const Formulario = () => {
         setForm(false);
     }
 
-    
     return ( form &&
         <div className="formulario animate__animated animate__backInDown">
             <i 

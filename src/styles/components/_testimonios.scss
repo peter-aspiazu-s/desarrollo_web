@@ -4,7 +4,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 350px;
+    height: auto;
+    margin-top: 15px;
 
     .fa-file-pen, .fa-floppy-disk {
         position: absolute;
@@ -115,7 +116,7 @@
     }
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 850px){
     .testimonio__container{
         grid-template-columns: repeat(3, 1fr);
         

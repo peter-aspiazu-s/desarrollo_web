@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
 }
 
 .google-btn {
@@ -11,7 +12,7 @@
     align-items: center;
     position: relative;
     cursor: pointer;
-    width: 100%;
+    width: 95%;
     height: 42px;
     background-color: #4285f4;
     border-radius: 2px;
@@ -55,6 +56,10 @@
 
 
 @media screen and (min-width: 600px){
+    .google__div {
+        margin-top: 25px;
+    }
+
     .google-btn {
         width: 400px;
     }

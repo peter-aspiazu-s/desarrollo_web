@@ -42,7 +42,7 @@ export const Testimonios = () => {
             :
             testimonio.map((testim, index) => {
                     
-                return <div className="testimonio__card mt-5" key={index} id={testim.uid} onLoad={ prueba }>
+                return <div className="testimonio__card" key={index} id={testim.uid} onLoad={ prueba }>
                     
                     {
                         (currentUser === 2 && !edit) ? 
