@@ -7,13 +7,18 @@ import { guardarFormulario } from "../helpers/guardarFormulario";
 
 export const Formulario = () => {
 
-    const [ formValues, handleInputChange ] = useForm({
+    const {form, setForm, userGoogle} = useContext(Usercontext);
+
+    const [ formValues, setFormValues, handleInputChange ] = useForm({
         nombre: '',
         correo: '',
         numero: '',
         comentario: '',
+        uid: userGoogle.uid,
         date: new Date()
     })
+
+    console.log(formValues);
 
     const { nombre, correo, numero, comentario } = formValues;
 
@@ -64,10 +69,12 @@ export const Formulario = () => {
                 return false;
             }
         }
+        setFormValues({
+            ...formValues,
+            uid: userGoogle.uid
+        })
         return true;
     }
-
-    const {form, setForm} = useContext(Usercontext);
     
     const handleClickRemove = () => {
         setForm(false);
