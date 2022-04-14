@@ -14,5 +14,6 @@ export const loginGoogle = async(googleProvider) => {
             icon: 'error',
             confirmButtonText: 'ok'
         })
+        console.log(error);
     }
 }
