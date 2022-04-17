@@ -18,8 +18,6 @@ export const Formulario = () => {
         date: new Date()
     })
 
-    console.log(formValues);
-
     const { nombre, correo, numero, comentario } = formValues;
 
     const handleSubmit = (e) => {

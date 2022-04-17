@@ -1,18 +1,8 @@
-import { app } from "../firebase/firebase-config";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
-import { useState } from "react";
-const db = getFirestore(app);
-
-export const leerData = async() => {
+export const validarUsuario = async(data, uid) => {
     try {
-        const testimonios = [];
-        const collectionRef = collection(db, "testimonios");
-        const snapshot = await getDocs(collectionRef);
-        snapshot.forEach(doc => {
-            testimonios.push(doc.data());
-        });
-
-        return testimonios;
+        const userUid = await data.filter( id => id.uid === uid )
+        
+        return userUid[0].uid;
     
     } catch (error) {
         console.log(error);    

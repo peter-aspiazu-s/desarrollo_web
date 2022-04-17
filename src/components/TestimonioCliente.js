@@ -77,9 +77,10 @@ export const TestimonioCliente = () => {
         <div>
             <p className="mt-4 text-center">Bienvenido <b>{userGoogle.displayName}</b> para terminar el proceso
                 agrega tu testimonio.</p>
-            <div className="testimonio__card mt-3">
+            <div className="testimonio__card mt-3 container">
                     
                 <i className="fa-solid fa-floppy-disk"
+                title="Guardar"
                 onClick={ handleClickAdd }></i>
 
                 
@@ -91,7 +92,8 @@ export const TestimonioCliente = () => {
                             name="url"
                             onChange={handleFileChange}
                         />
-                        <i className="fa-solid fa-image ico-img" onClick={ subirImagen }></i>
+                        <i className="fa-solid fa-image ico-img" 
+                        title="Subir imagen" onClick={ subirImagen }></i>
                 </div>  
                 
                 <input type="text"

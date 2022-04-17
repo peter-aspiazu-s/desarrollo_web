@@ -1,6 +1,4 @@
 import { useContext } from "react";
-import { Formulario } from "./Formulario";
-import { Navigation } from "./Navigation";
 import { Usercontext } from "./UserContext";
 import { GoogleAuthProvider } from "firebase/auth";
 import { loginGoogle } from "../helpers/loginGoogle";
@@ -8,7 +6,7 @@ import { logoutGoogle } from "../helpers/logoutGoogle";
 
 export const BarraSup = () => {
 
-    const {state, setState, form, currentUser, userLogin} = useContext(Usercontext);
+    const {state, setState, userLogin} = useContext(Usercontext);
     
     const handleClickMenu = () => {
         setState(!state);
@@ -54,15 +52,6 @@ export const BarraSup = () => {
                     ></i>
                 }
             </div>
-
-            {
-                state && <Navigation />
-            }
-
-            {
-                form && <Formulario />
-            }
-
         </>
     )
 } 

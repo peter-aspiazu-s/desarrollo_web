@@ -15,14 +15,12 @@ import { getAuth } from "firebase/auth";
 import { Login } from "./components/Login";
 import { TestimonioCliente } from "./components/TestimonioCliente";
 import { leerTestimonios } from "./helpers/leerTestimonios";
+import { validarUsuario } from "./helpers/validarUsuario";
+import { Formulario } from "./components/Formulario";
+import { Navigation } from "./components/Navigation";
 const auth = getAuth(app);
 
 export const Home = () => {
-
-    const [ state, setState ] = useState(false);
-    const [ form, setForm ] = useState(false);
-    const [ social, setSocial ] = useState(false);
-    const [ userGoogle, setUserGoogle ] = useState({});
     
     /* 
         0: inicializado
@@ -32,36 +30,21 @@ export const Home = () => {
         4: no hay nadie logueado
     */
 
+    const [ state, setState ] = useState(false);
+    const [ form, setForm ] = useState(false);
+    const [ social, setSocial ] = useState(false);
+    const [ userGoogle, setUserGoogle ] = useState({});
     const [ currentUser, setCurrentUser ] = useState(0);
     const [ edit, setEdit ] = useState(false);
     const [ userLogin, setUserLogin ] = useState(false);
     const [ testimonio, setTestimonios ] = useState([]);
     const [ userPhoto, setUserPhoto ] = useState();
-
-    //let i;
-    //let testimoniosUser = [];
-
-    const actualizarTestimonios = () => {
-        leerTestimonios().then((testimonios) => {
-            setTestimonios(testimonios);
-        })
-    }
+    const [ uid, setUid ] = useState();
     
     useEffect(() => {
         onAuthStateChanged(auth, async(user) => {
-
             if(user){
-                //for(i = 0; i < testimonio.length; i++){
-                    //testimoniosUser.push(testimonio[i].uid);
-                    //if(testimoniosUser.indexOf(user.uid, i)){
-                    if(false){
-                        setCurrentUser(2);
-                        console.log('true')
-                    } else{
-                        setCurrentUser(3);
-                        console.log('false')
-                    }
-                //}
+                setCurrentUser(3);
                 setUserLogin(true);
                 setUserGoogle(user);
             } else {
@@ -69,12 +52,17 @@ export const Home = () => {
                 setCurrentUser(4); // no existe el usuario
             }
         });
-
-        actualizarTestimonios();
-        
-    }, []);
-
+    }, [userGoogle]);
     
+    const actualizarTestimonios = () => {
+        leerTestimonios().then((testimonios) => {
+            setTestimonios(testimonios);
+        })
+    };
+
+    useEffect(() => {
+        actualizarTestimonios();
+    }, []);
 
     return ( 
         <Usercontext.Provider value={{
@@ -93,9 +81,9 @@ export const Home = () => {
             actualizarTestimonios,
             testimonio,
             userPhoto, 
-            setUserPhoto
+            setUserPhoto,
+            uid
         }}>
-            
             <BarraSup />
             <Carrusel />
             <Main />
@@ -104,11 +92,20 @@ export const Home = () => {
             <Yo />
             <Testimonios />
             {
-                (currentUser === 4) && <Login /> 
+                (currentUser === 4) &&
+                <Login /> 
             }
             {
                 (currentUser === 3) &&
                 <TestimonioCliente />
+            }
+            {
+                state &&
+                <Navigation />
+            }
+            {
+                form &&
+                <Formulario />
             }
             <RedesSociales />
             <Footer />

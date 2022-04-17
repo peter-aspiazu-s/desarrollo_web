@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import { Usercontext } from "./UserContext"
 
 export const RedesSociales = () => {

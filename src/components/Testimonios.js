@@ -1,13 +1,19 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Usercontext } from "./UserContext";
 
 export const Testimonios = () => {
-    
-    const { userGoogle, currentUser, edit, setEdit, testimonio, userPhoto, actualizarTestimonios } = useContext(Usercontext);
 
-    useEffect(() => {
-        actualizarTestimonios();
-    },[userPhoto])
+    const [ cardId, setCardId ] = useState(null);
+    
+    const { 
+        userGoogle, 
+        currentUser, 
+        edit, setEdit, 
+        testimonio, 
+        actualizarTestimonios, 
+        } = useContext(Usercontext);
+
+    //actualizarTestimonios();
 
     const handleClickEdit = () => {
         setEdit(true);
@@ -17,10 +23,19 @@ export const Testimonios = () => {
         setEdit(false);
     }
 
-    const prueba = async () => {
+    
+    const pruebaId = () => {
         const ref = document.querySelector('.testimonio__card');
         const id = ref.getAttribute('id');
+        setCardId(id);
     }
+
+    useEffect(() => {
+        if(currentUser === 2){
+            pruebaId();
+        }
+    }, [currentUser]);
+    
 
     return (
         <div className="container mt-8 testimonio" id="testimonios">
@@ -28,7 +43,7 @@ export const Testimonios = () => {
                 <h2 className="text-center">Testimonios de Clientes</h2>
             </div>
             
-            <div className="testimonio__container" id={ userGoogle.uid }>
+            <div className="testimonio__container">
             {
             (!testimonio) ?  
                 <div className="loading">
@@ -42,10 +57,10 @@ export const Testimonios = () => {
             :
             testimonio.map((testim, index) => {
                     
-                return <div className="testimonio__card" key={index} id={testim.uid} onLoad={ prueba }>
+                return <div className="testimonio__card" key={index} id={testim.uid} onLoad={ pruebaId }>
                     
                     {
-                        (currentUser === 2 && !edit) ? 
+                        (currentUser === 2 && (cardId === userGoogle.uid) && !edit) ? 
                             <i className="fa-solid fa-file-pen fa-xl me-1"
                             onClick={ handleClickEdit }></i>
                             
