@@ -18,6 +18,7 @@ import { leerTestimonios } from "./helpers/leerTestimonios";
 import { validarUsuario } from "./helpers/validarUsuario";
 import { Formulario } from "./components/Formulario";
 import { Navigation } from "./components/Navigation";
+import { Alert } from "./components/Alert";
 const auth = getAuth(app);
 
 export const Home = () => {
@@ -40,6 +41,7 @@ export const Home = () => {
     const [ testimonio, setTestimonios ] = useState([]);
     const [ userPhoto, setUserPhoto ] = useState();
     const [ uid, setUid ] = useState();
+    const [ alert, setAlert ] = useState(false);
     
     useEffect(() => {
         onAuthStateChanged(auth, async(user) => {
@@ -53,10 +55,20 @@ export const Home = () => {
             }
         });
     }, [userGoogle]);
+
+    useEffect(() => {
+        const prueba = validarUsuario(testimonio, userGoogle.uid);
+        prueba.then(uid => {
+            if(uid){
+                setCurrentUser(2);
+            }
+        })
+    },[testimonio, userGoogle])
     
     const actualizarTestimonios = () => {
         leerTestimonios().then((testimonios) => {
             setTestimonios(testimonios);
+            console.log("otra peticion");
         })
     };
 
@@ -82,7 +94,9 @@ export const Home = () => {
             testimonio,
             userPhoto, 
             setUserPhoto,
-            uid
+            uid,
+            alert, 
+            setAlert
         }}>
             <BarraSup />
             <Carrusel />
@@ -106,6 +120,10 @@ export const Home = () => {
             {
                 form &&
                 <Formulario />
+            }
+            {
+                alert &&
+                <Alert />
             }
             <RedesSociales />
             <Footer />

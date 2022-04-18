@@ -10,7 +10,16 @@
     .fa-file-pen, .fa-floppy-disk {
         position: absolute;
         top: 10px;
-        right: 0;
+        left: 10px;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .fa-xmark {
+        position: absolute;
+        top: 10px;
+        right: 10px;
         font-size: 30px;
         cursor: pointer;
         color: white;
