@@ -53,3 +53,22 @@
     background-color: cadetblue;
     color: #fff;
 }
+
+
+@media screen and (min-width: 400px){
+    .alert__div{
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 500px){
+    .alert__div{
+        width: 350px;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .alert__div{
+        height: 250px;
+    }
+}
