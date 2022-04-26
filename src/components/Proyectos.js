@@ -63,15 +63,15 @@ export const Proyectos = () => {
                 </SwiperSlide>
                 <SwiperSlide className="proyectos__swiper">
                     <img 
-                        src="./assets/img/Gestor-de-tareas.jpg"
-                        alt="Gestor de tareas"
-                        title="Gestor de tareas"    
+                        src="./assets/img/img-min.jpg"
+                        alt="Lista de tareas"
+                        title="Lista de tareas"    
                     />
                     <a 
-                        href="https://peter-aspiazu-s.github.io/Gestor-de-tareas/" 
-                        alt="Enlace a sitio web de gestor de tareas"
+                        href="https://peter-aspiazu-s.github.io/lista-tareas-app-react/" 
+                        alt="Enlace a sitio web de lista de tareas"
                         target="_blank">
-                            No Adaptable
+                            Lista de Tareas App
                     </a>
                 </SwiperSlide>
                 <SwiperSlide className="proyectos__swiper">
