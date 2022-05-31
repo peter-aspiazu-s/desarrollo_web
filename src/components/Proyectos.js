@@ -42,7 +42,7 @@ export const Proyectos = () => {
                         title="Replica D'Prati"    
                     />
                     <a 
-                        href="https://peter-aspiazu-s.github.io/Gestor-de-tareas/" 
+                        href="https://peter-aspiazu-s.github.io/Proyecto-Replica-D-Prati/" 
                         alt="Enlace a sitio web de Replica D'Prati"
                         target="_blank">
                             Ir a Replica D'Prati
