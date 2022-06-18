@@ -24,6 +24,19 @@ export const Proyectos = () => {
             >
                 <SwiperSlide className="proyectos__swiper">
                     <img 
+                        src="./assets/img/proyecto-wego.png" 
+                        alt="Proyecto Web WeGo"
+                        title="Sitio Web WeGo" 
+                    />
+                    <a 
+                        href="https://peter-aspiazu-s.github.io/wego/"
+                        alt="Enlace a sitio web de WeGo"
+                        target="_blank">
+                            Ir a Sitio Web WeGo
+                    </a>
+                </SwiperSlide>
+                <SwiperSlide className="proyectos__swiper">
+                    <img 
                         src="./assets/img/Proyecto-Replica-D-Cuero-Shoes.jpg" 
                         alt="Replica D'Cuero Shoes"
                         title="Replica D'Cuero Shoes" 
