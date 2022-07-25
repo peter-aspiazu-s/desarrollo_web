@@ -30,7 +30,7 @@ export const Testimonios = () => {
 
         if(currentUser === 2){
             pruebaId();
-            console.log("prueba");
+            // console.log("prueba");
         }
         return () => {
 

@@ -6,7 +6,7 @@ export const Yo = () => {
             <h3 className="yo__h3">¿Quien Soy?</h3>
             <div className="yo__div">
                 <img 
-                    src="./assets/img/yo.jpg" 
+                    src="./assets/img/yo.webp" 
                     alt="Foto de Peter Aspiazu"
                     title="Foto de mi perfil"
                     className="yo__img mt-5" />
@@ -42,6 +42,30 @@ export const Yo = () => {
                             <div className="yo__aside-div-div">
                                 <i className="fa-solid fa-fire"></i>
                                 <p>FIREBASE</p>
+                            </div>
+                            <div className="yo__aside-div-div">
+                                <i class="fa-solid fa-database"></i>
+                                <p>POSTGRESQL</p>
+                            </div>
+                            <div className="yo__aside-div-div">
+                                <i className="fa-brands fa-react"></i>
+                                <p>REDUX</p>
+                            </div>
+                            <div className="yo__aside-div-div">
+                                <i class="fa-solid fa-leaf"></i>
+                                <p>MONGODB</p>
+                            </div>
+                            <div className="yo__aside-div-div">
+                                <i class="fa-brands fa-node-js"></i>
+                                <p>NODEJS</p>
+                            </div>
+                            <div className="yo__aside-div-div">
+                                <i class="fa-brands fa-etsy"></i>
+                                <p>EXPRESS</p>
+                            </div>
+                            <div className="yo__aside-div-div">
+                                <i class="fa-brands fa-ets">jwt</i>
+                                <p>JWT</p>
                             </div>
                         </div>
                     </aside>

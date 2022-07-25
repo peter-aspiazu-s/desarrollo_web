@@ -24,7 +24,20 @@ export const Proyectos = () => {
             >
                 <SwiperSlide className="proyectos__swiper">
                     <img 
-                        src="./assets/img/proyecto-wego.png" 
+                        src="./assets/img/king-clean.webp" 
+                        alt="Proyecto Web King Clean"
+                        title="Sitio Web King Clean" 
+                    />
+                    <a 
+                        href="https://peter-aspiazu-s.github.io/king-clean/"
+                        alt="Enlace a sitio web de King Clean"
+                        target="_blank">
+                            Ir a Sitio Web King Clean
+                    </a>
+                </SwiperSlide>
+                <SwiperSlide className="proyectos__swiper">
+                    <img 
+                        src="./assets/img/proyecto-wego.webp" 
                         alt="Proyecto Web WeGo"
                         title="Sitio Web WeGo" 
                     />
@@ -37,7 +50,7 @@ export const Proyectos = () => {
                 </SwiperSlide>
                 <SwiperSlide className="proyectos__swiper">
                     <img 
-                        src="./assets/img/Proyecto-Replica-D-Cuero-Shoes.jpg" 
+                        src="./assets/img/Proyecto-Replica-D-Cuero-Shoes.webp" 
                         alt="Replica D'Cuero Shoes"
                         title="Replica D'Cuero Shoes" 
                     />
@@ -50,7 +63,7 @@ export const Proyectos = () => {
                 </SwiperSlide>
                 <SwiperSlide className="proyectos__swiper">
                     <img 
-                        src="./assets/img/Proyecto-Replica-D-Prati.jpg"
+                        src="./assets/img/Proyecto-Replica-D-Prati.webp"
                         alt="Replica D'Prati"
                         title="Replica D'Prati"    
                     />
@@ -63,7 +76,7 @@ export const Proyectos = () => {
                 </SwiperSlide>
                 <SwiperSlide className="proyectos__swiper">
                     <img 
-                        src="./assets/img/Journal-App.jpg" 
+                        src="./assets/img/Journal-App.webp" 
                         alt="Journal App"
                         title="Journal App" 
                     />
@@ -76,7 +89,7 @@ export const Proyectos = () => {
                 </SwiperSlide>
                 <SwiperSlide className="proyectos__swiper">
                     <img 
-                        src="./assets/img/img-min.jpg"
+                        src="./assets/img/img-min.webp"
                         alt="Lista de tareas"
                         title="Lista de tareas"    
                     />
@@ -89,7 +102,7 @@ export const Proyectos = () => {
                 </SwiperSlide>
                 <SwiperSlide className="proyectos__swiper">
                     <img 
-                        src="./assets/img/react-gifexpertapp.jpg"
+                        src="./assets/img/react-gifexpertapp.webp"
                         alt="Buscador de Gif"
                         title="Buscador de Gif"    
                     />
@@ -102,7 +115,7 @@ export const Proyectos = () => {
                 </SwiperSlide>
                 <SwiperSlide className="proyectos__swiper">
                     <img 
-                        src="./assets/img/peter-aspiazu.png"
+                        src="./assets/img/peter-aspiazu.webp"
                         alt="Web Peter Aspiazu"
                         title="Web Peter Aspiazu"    
                     />
@@ -113,9 +126,6 @@ export const Proyectos = () => {
                             ir a Web Peter Aspiazu
                     </a>
                 </SwiperSlide>
-                <SwiperSlide>Proximamente</SwiperSlide>
-                <SwiperSlide>Proximamente</SwiperSlide>
-                <SwiperSlide>Proximamente</SwiperSlide>
             </Swiper>
         </article>
     )

@@ -1,3 +1,10 @@
+.main__h2{
+    text-align: center;
+}
+.main__p{
+    text-align: justify;
+}
+
 @media screen and (min-width: 700px) {
     .main__h2, .main__p {
         text-align: center;

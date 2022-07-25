@@ -1,5 +1,5 @@
 .social__enlace {
-    background-color: #009154;
+    background-color: #151d30;
     color: $text-color;
     cursor: pointer;
     width: 50px;
@@ -17,7 +17,7 @@
 }
 
 .social__enlace-hover{
-    opacity: 0.5;
+    opacity: 0.8;
     transition: opacity .5s;
 
     &:hover {
@@ -40,7 +40,8 @@
 
     i {
         font-size: 30px;
-        color: #003618;
+        color: white;
+        text-shadow: 1px 1px 1px #151d30;
     }
 
     

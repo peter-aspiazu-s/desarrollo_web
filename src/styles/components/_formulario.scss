@@ -1,5 +1,5 @@
 .formulario {
-    background-color: rgba(0, 164, 64, 0.9);
+    background-color: rgba($color: #151d30, $alpha: 0.8);
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -17,7 +17,7 @@
 }
 
 .fa-circle-xmark {
-    color: #005330;
+    color: white;
     position: absolute;
     top: 30px;
     right: 10px;
@@ -25,7 +25,7 @@
 }
 
 .formulario__h2 {
-    color: #dbdbdb;
+    color: white;
 }
 
 .formulario__form {
@@ -46,7 +46,7 @@
     
     &::placeholder {
         opacity: 1;
-        color: #000;
+        color: white;
     }
 }
 
@@ -59,7 +59,7 @@
 
     &::placeholder {
         opacity: 1;
-        color: #000;
+        color: white;
     }
 }
 
@@ -71,14 +71,14 @@
 }
 
 .formulario__input, .formulario__textarea, .formulario__submit {
-    background-color: #009154;
-    box-shadow: inset 0px 0px 25px 0px #03602c;
+    background-color: #15141a;
+    box-shadow: inset 0px 0px 25px 0px #151d30;
     border-radius: 5px;
     border: 1px solid white;
     color: $text-color;
 
     &:focus {
-        box-shadow: 0px 0px 15px 0px #03602c;
+        box-shadow: 0px 0px 15px 0px #15141a;
         outline: 0;
         background-color: transparent;
     }

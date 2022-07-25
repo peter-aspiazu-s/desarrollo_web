@@ -50,7 +50,7 @@ export const Section = () => {
                  </div>
             </article>
 
-            <article className="section__article mt-5">
+            {/* <article className="section__article mt-5">
                 <img 
                     src="./assets/img/contenido.svg" 
                     alt="Contenido web" 
@@ -72,7 +72,7 @@ export const Section = () => {
                         </span>
                     </h2>
                  </div>
-            </article>
+            </article> */}
 
             <article className="section__article mt-5">
                 <img 
@@ -143,7 +143,7 @@ export const Section = () => {
                  </div>
             </article>
 
-            <article className="section__article mt-5">
+            {/* <article className="section__article mt-5">
                 <img 
                     src="./assets/img/chat-bot.svg" 
                     alt="Chat Bot" 
@@ -161,7 +161,7 @@ export const Section = () => {
                         </span>
                     </h2>
                  </div>
-            </article>
+            </article> */}
         </section>
     )
 }

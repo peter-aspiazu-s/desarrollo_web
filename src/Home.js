@@ -1,7 +1,7 @@
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { BarraSup } from "./components/BarraSup";
-import { Carrusel } from "./components/Carrusel";
+// import { Carrusel } from "./components/Carrusel";
 import { Footer } from "./components/Footer";
 import { Main } from "./components/Main";
 import { Proyectos } from "./components/Proyectos";
@@ -19,6 +19,7 @@ import { validarUsuario } from "./helpers/validarUsuario";
 import { Formulario } from "./components/Formulario";
 import { Navigation } from "./components/Navigation";
 import { Alert } from "./components/Alert";
+import { PresentacionSup } from "./components/PresentacionSup";
 const auth = getAuth(app);
 
 export const Home = () => {
@@ -99,7 +100,8 @@ export const Home = () => {
             setAlert
         }}>
             <BarraSup />
-            <Carrusel />
+            {/* <Carrusel /> */}
+            <PresentacionSup />
             <Main />
             <Section />
             <Proyectos />
