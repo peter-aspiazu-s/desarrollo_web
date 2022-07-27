@@ -1,0 +1,110 @@
+.precio{
+    background-color: #151d30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 700px;
+    padding: 20px 0;
+    margin: 40px 0;
+
+    .mySwiper{
+        width: 260px;
+        height: auto;
+        
+        .mySwiper__card-container {
+            box-shadow: 0px 0px 5px 5px #15141a;
+            background-color: #15141a;
+            width: 100%;
+            height: auto;
+            padding: 20px 0;
+            border: 1px solid white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h3{
+                margin-bottom: 20px;
+            }
+
+            .precio__card-site{
+                margin-bottom: 20px;
+            }
+            .precio__card-precio{
+                margin-bottom: 20px;
+            }
+
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                border-top: 1px solid #151d30;
+                border-bottom: 1px solid #151d30;
+                margin-bottom: 10px;
+                padding: 5px;
+                
+                i{
+                    margin-right: 5px;
+                }
+                .fa-circle-check{
+                    color: lawngreen;
+                }
+                .fa-xmark{
+                    color: brown;
+                }
+            }
+
+            a{
+                background-color: white;
+                color: #15141a;
+                text-decoration: none;
+                padding: 10px 20px;
+                font-weight: 600;
+            }
+        }
+
+    }
+}
+
+
+@media screen and (min-width: 500px){
+    .precio{
+    
+        .mySwiper{
+            width: 300px;
+    
+        }
+    }
+}
+
+@media screen and (min-width: 700px){
+    .precio{
+    
+        .mySwiper{
+            width: 350px;
+    
+        }
+    }
+}
+
+@media screen and (min-width: 900px){
+    .precio{
+    
+        .mySwiper{
+            width: 450px;
+    
+        }
+    }
+}
+
+@media screen and (min-width: 1100px){
+    .precio{
+    
+        .mySwiper{
+            width: 550px;
+    
+        }
+    }
+}

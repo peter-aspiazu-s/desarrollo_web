@@ -48,13 +48,10 @@ export const RedesSociales = () => {
                         <a href="https://www.instagram.com/paspiazus/" title="instagram" target="_blank"><i className="fa-brands fa-instagram-square"></i></a>
                     </div>
                     <div className="redes__enlace">
-                        <a href="https://www.linkedin.com/in/peter-aspiazu/" title="linkedin" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
-                    </div>
-                    <div className="redes__enlace">
-                        <a href="https://github.com/peter-aspiazu-s" title="github" target="_blank"><i className="fa-brands fa-github-alt"></i></a>
-                    </div>
-                    <div className="redes__enlace">
                         <a href="tel:593967454468" title="llámame"><i className="fa-solid fa-phone"></i></a>
+                    </div>
+                    <div className="redes__enlace">
+                        <a href="https://www.facebook.com/Aspiazu-Tecnologia-107942758626970/" title="llámame" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                     </div>
                 </div>
             }

@@ -32,7 +32,7 @@ export const BarraSup = () => {
                     onClick={ handleClickMenu }
                 ></i>
                 <i className="fa-solid fa-code"></i>
-                <h1>DESARROLLO WEB</h1>
+                <h1>ASPIAZU TECNOLOGIA</h1>
                 {
                     (userLogin) &&  
                         <i 

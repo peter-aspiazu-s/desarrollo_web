@@ -1,7 +1,7 @@
 export const Section = () => {
 
     return (
-        <section className="container mt-5 section">
+        <section className="container mt-5 mb-5 section" id="elementos">
             <h2 className="section__h2">Indispensable en un sitio web</h2>
             <article className="section__article mt-5">
                 <img 

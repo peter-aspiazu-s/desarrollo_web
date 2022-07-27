@@ -20,6 +20,8 @@ import { Formulario } from "./components/Formulario";
 import { Navigation } from "./components/Navigation";
 import { Alert } from "./components/Alert";
 import { PresentacionSup } from "./components/PresentacionSup";
+import { ContactUs } from "./components/ContactUs";
+import { Precios } from "./components/Precios";
 const auth = getAuth(app);
 
 export const Home = () => {
@@ -103,9 +105,13 @@ export const Home = () => {
             {/* <Carrusel /> */}
             <PresentacionSup />
             <Main />
+            <ContactUs />
             <Section />
+            <ContactUs />
             <Proyectos />
+            <Precios />
             <Yo />
+            <ContactUs />
             <Testimonios />
             {
                 (currentUser === 4) &&
