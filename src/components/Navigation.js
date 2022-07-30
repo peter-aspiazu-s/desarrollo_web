@@ -41,7 +41,7 @@ export const Navigation = () => {
                     className="container text-center menu__item pointer" 
                     href="#elementos"
                     onClick={ handleClickItemMenu }>
-                    <i className="fa-solid fa-screwdriver-wrench fa-xl me-1"></i>
+                    <i class="fa-brands fa-elementor fa-xl me-1"></i>
                     ELEMENTOS DE UN SITIO WEB
                 </a>
                 <a 
@@ -55,7 +55,7 @@ export const Navigation = () => {
                     className="container text-center menu__item pointer" 
                     href="#precios"
                     onClick={ handleClickItemMenu }>
-                    <i className="fa-solid fa-folder-open fa-xl me-1"></i>
+                    <i class="fa-solid fa-hand-holding-dollar fa-xl me-1"></i>
                     PRECIOS
                 </a>
                 <a 

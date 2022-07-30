@@ -15,6 +15,7 @@ import { EffectCards } from "swiper";
 export const Precios = () => {
     return(
         <div className="precio container" id="precios">
+            <h3>Precios de Sitios Web Profesionales</h3>
             <Swiper
                 effect={"cards"}
                 grabCursor={true}
@@ -33,6 +34,7 @@ export const Precios = () => {
                     <div><i class="fa-solid fa-circle-check"></i><p>Enlace a Redes Sociales</p></div>
                     <div><i class="fa-solid fa-circle-check"></i><p>Botón Fijo de WhatsApp</p></div>
                     <div><i class="fa-solid fa-circle-check"></i><p>Diseño Adaptable a Pantallas de Celular, Tablet y PC</p></div>
+                    <div><i class="fa-solid fa-circle-check"></i><p>5 Cuentas de Correo Corporativo</p></div>
                     <div><i class="fa-solid fa-xmark"></i><p>Formulario de Contacto con Envío al Email</p></div>
                     <div><i class="fa-solid fa-xmark"></i><p>Animaciones, Efectos y Transisiones Personalizadas</p></div>
 
@@ -49,6 +51,7 @@ export const Precios = () => {
                     <div><i class="fa-solid fa-circle-check"></i><p>Enlace a Redes Sociales</p></div>
                     <div><i class="fa-solid fa-circle-check"></i><p>Botón Fijo de WhatsApp</p></div>
                     <div><i class="fa-solid fa-circle-check"></i><p>Diseño Adaptable a Pantallas de Celular, Tablet y PC</p></div>
+                    <div><i class="fa-solid fa-circle-check"></i><p>5 Cuentas de Correo Corporativo</p></div>
                     <div><i class="fa-solid fa-circle-check"></i><p>Formulario de Contacto con Envío al Email</p></div>
                     <div><i class="fa-solid fa-xmark"></i><p>Animaciones, Efectos y Transisiones Personalizadas</p></div>
 
@@ -65,6 +68,7 @@ export const Precios = () => {
                     <div><i class="fa-solid fa-circle-check"></i><p>Enlace a Redes Sociales</p></div>
                     <div><i class="fa-solid fa-circle-check"></i><p>Botón Fijo de WhatsApp</p></div>
                     <div><i class="fa-solid fa-circle-check"></i><p>Diseño Adaptable a Pantallas de Celular, Tablet y PC</p></div>
+                    <div><i class="fa-solid fa-circle-check"></i><p>5 Cuentas de Correo Corporativo</p></div>
                     <div><i class="fa-solid fa-circle-check"></i><p>Formulario de Contacto con Envío al Email</p></div>
                     <div><i class="fa-solid fa-circle-check"></i><p>Animaciones, Efectos y Transisiones Personalizadas</p></div>
 
